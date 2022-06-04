@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+$mainPadding: 0 122px;
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin h2-title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    color: #2F281E;
+}
+
+body {
+    max-width: 1440px;
+    min-width: 1440px;
+    margin: auto;
+    color: #2F281E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navigation {
+    padding: $mainPadding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 78px;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.05));
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navigation__list {
+    display: flex;
+    gap: 17px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.navigation__item {
+    color: #2F281E;
+}
+
+.navigation__btnswrap {
+    display: flex;
+    gap: 14px;
+}
+
+.navigation__btn {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #173A56;
+    border: 1px solid #BCD0E5;
+    border-radius: 4px;
+    padding: 12px 24px;
+    background-color: transparent;
+}
+
+.sign-up {
+    border: 1px solid #FF9900;
+    background-color: #FF9900;
+    color: #FFFFFF;
+}
+
+.navigation__item:hover {
+    color: #FF9900;
+}
+
+.sign-in:hover {
+    background-color: #BCD0E5;
+}
+
+.sign-up:hover {
+    opacity: 0.6;
+}
+
+.header-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    width: 1196px;
+    height: 495px;
+}
+
+.header-main__text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 54px;
+}
+
+.header-main__info {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #544837;
+}
+
+.header-main__btnswrap {
+    display: flex;
+    gap: 44px;
+}
+
+.header-main__start {
+    background: #FF9900;
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 15px 40px;
+}
+
+.header-main__video {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #FF9900;
+}
+
+.tools {
+    height: 543px;
+    background-image: url(./tools-bg.svg);
+    background-position: center bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 112px;
+    padding: $mainPadding;
+}
+
+.tools__title {
+    @include h2-title;
+    text-align: center;
+    max-width: 462px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.tools__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-items: center;
+    margin: auto;
+}
+
+.tools__item {
+    display: flex;
+    flex-direction: column;
+    width: 262px;
+img {
+    width: 50px;
+}
+}
+
+.tools__item__title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: #2F281E;
+    margin: 30px 0 16px 0;
+}
+
+.tools__item__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #544837;
+}
+
+.tools__item__btn {
+    display: block;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 15px 35px;
+    background: #FF7549;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.strategies {
+    padding: $mainPadding;
+}
+
+.strategies__title {
+    @include h2-title;
+}
+
+.strategies__text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #544837;
+    margin-top: 14px;
+}
