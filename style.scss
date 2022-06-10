@@ -8,6 +8,12 @@ $mainPadding: 0 122px;
     flex-direction: column;
 }
 
+@mixin about-position {
+    position: absolute;
+    left: 270px;
+    top: 13px;
+}
+
 @mixin h2-title {
     font-style: normal;
     font-weight: 700;
@@ -264,8 +270,9 @@ img {
     grid-template-areas: "card-1 card-2 card-3"
                          "card-4 card-4 card-5" 
                          "card-6 card-7 card-8";
-    grid-gap: 34px;     
-    
+    grid-gap: 34px;    
+    justify-content: center;
+    justify-items: center;    
 }
 
 .strategies__card {
@@ -335,6 +342,7 @@ img {
 .about {
     padding: $mainPadding;
     margin-top: 96px;
+    margin-bottom: 101px
 }
 
 .about__title {
@@ -354,5 +362,76 @@ img {
 
 .about__cards-wrap {
     display: flex;
+    justify-content: space-between;
+}
+
+.about__card {
+    position: relative;
+    width: 354px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 35px 0 35px 35px;
+}
+
+.about__card:first-of-type:after {
+    @include about-position;
+    content: url('./about-1.png');
+}
+
+.about__card:nth-of-type(2):after {
+    @include about-position;
+    content: url('./about-2.png');
+}
+
+.about__card:nth-of-type(3):after {
+    @include about-position;
+    content: url('./about-3.png');
+}
+
+
+.about__card-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #544837;
+}
+
+.about__card-profession {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #544837;
+}
+
+.about__card-email {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #1943EF;
+}
+
+.contact {
+    padding: $mainPadding;
+    padding-top: 62px;
+    padding-bottom: 90px;
+    background: #FFEEE1;
+}
+
+.contact-title {
+        @include h2-title;
+        margin-top: 62px;
+        margin-bottom: 17px;
+}
+
+.contact-info {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #544837;
 }
 
